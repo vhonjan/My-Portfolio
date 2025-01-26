@@ -1,0 +1,343 @@
+/* Resetting default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+    background: url(1.jpg) no-repeat center center fixed; /* Ensure the background is centered and fixed */
+    background-size: cover; /* Ensures the background image covers the whole screen */
+    height: 100vh; /* Makes the section take the full height of the viewport */
+    position: relative;
+    font-family: sans-serif;
+    background-color: rgba(255, 255, 255, 0.8); 
+}
+
+.navbar {
+    width: 70%;
+    display: flex;
+    margin: auto;
+    padding: 1.5rem 0;
+    align-items: center;
+}
+
+.navbar .logo {
+    width: 160px;
+    cursor: pointer;
+}
+
+ul {
+    margin-top: -4%;
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0.625rem 1rem;
+}
+
+ul li a {
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: darkslategray;
+    margin-top: -3%;
+    transition: 0.4s ease;
+}
+
+ul li a:hover {
+    color: rgb(230, 104, 59);
+}
+
+/* Flexbox for .info section to align the profile image and text */
+.info {
+    display: flex;
+    justify-content: center; /* Centers everything horizontally */
+    flex-direction: column; /* Stacks the elements vertically */
+    align-items: center; /* Centers content vertically */
+    margin-top: 1.5%; /* Further reduced margin-top to move content higher */
+    padding-left: 8%; /* Shifted slightly to the left */
+}
+
+/* Text styling */
+.hi-text {
+    font-size: 1.5rem; /* Smaller font for "Hi, I'm" */
+    color: #333;
+    margin-bottom: 0.5rem; /* Space between "Hi, I'm" and the name */
+}
+
+.large-name {
+    font-size: 4rem; /* Adjust the size as needed */
+    font-weight: 700; /* Bold weight for the name */
+    color: black; /* Black color for the name */
+}
+
+.small-name {
+    font-size: 1.5rem; /* Smaller font for the degree */
+    font-weight: 400; /* Regular weight for the degree */
+    color: black; /* Black color for the degree */
+    display: block; /* Makes the degree text appear on a new line */
+    margin-top: 1rem; /* Adds space between the name and the degree */
+}
+
+/* Circular Profile Image */
+.profile-image {
+    width: 200px; /* Increased width */
+    height: 200px; /* Increased height */
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 1.5rem; /* Space between the image and the text */
+    margin-top: -3rem; /* Further reduced the margin-top to lift the image */
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Text container styles */
+.text {
+    max-width: 600px; /* Limit the text width */
+    text-align: center; /* Center the text */
+}
+
+.text h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.text h1 {
+    font-size: 3rem;
+    color: rgb(36, 32, 30);
+}
+
+.text p {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+.text a {
+    text-decoration: none;
+    color: #fff;
+    background: rgb(36, 32, 30);
+    margin-top: 1.5rem;
+    padding: 0.625rem 1.125rem;
+    border-radius: 10px;
+    display: inline-block;
+    transition: 0.4s ease;
+}
+
+.text a:hover {
+    background: rgb(59, 174, 209);
+}
+
+/* Flexbox for icons */
+.icons {
+    display: flex;
+    justify-content: center; /* Centers the icons horizontally */
+    margin-top: 2rem; /* Adds space between the text and icons */
+}
+
+.icons a {
+    text-decoration: none;
+    color: #000;
+    margin: 0 1rem; /* Adds space between the icons */
+}
+
+.icons ion-icon {
+    color: #000;
+    font-size: 2.5rem;
+    transition: 0.4s ease;
+}
+
+.icons ion-icon:hover {
+    color: rgb(59, 174, 209);
+}
+
+/* Apply the Roboto font to the whole body */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: black; /* Set default font color to black */
+}
+
+/* Added styles for profile image and text alignment */
+.info {
+    display: flex;
+    flex-direction: column; /* Stack profile image and text vertically */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    gap: 2rem; /* Adds space between profile image and text */
+}
+
+/* Align profile image to the side of the text */
+.profile-image {
+    width: 150px; /* Adjusted size */
+    height: 150px; /* Adjusted size */
+}
+
+/* Styling for the "Hi, I'm" and name */
+.hi-text {
+    font-size: 1.5rem; /* Smaller font for "Hi, I'm" */
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.large-name {
+    font-size: 4rem; /* Adjust the size as needed */
+    font-weight: 700; /* Bold weight for the name */
+    color: black;
+}
+
+.small-name {
+    font-size: 1.5rem; /* Smaller font for the degree */
+    font-weight: 400;
+    color: black;
+    margin-top: 1rem;
+}
+
+/* Icon container for alignment */
+.icons a {
+    font-size: 2.5rem; /* Size of the icons */
+    margin: 0 1rem; /* Space between icons */
+}
+
+/* Prevent text from scaling excessively */
+@media (max-width: 1200px) {
+    .large-name {
+        font-size: 3rem;
+    }
+
+    .small-name {
+        font-size: 1.25rem;
+    }
+
+    .hi-text {
+        font-size: 1.25rem;
+    }
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 768px) {
+    .large-name {
+        font-size: 2.5rem;
+    }
+
+    .small-name {
+        font-size: 1.125rem;
+    }
+
+    .hi-text {
+        font-size: 1.125rem;
+    }
+
+    .info {
+        padding: 1rem;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Add styles for the new Education section */
+.education {
+    background-image: url(1.jpg);
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.8); /* Slight background for better contrast */
+    border-radius: 10px;
+}
+
+.education h2 {
+    font-size: 2.5rem;
+    color: rgb(36, 32, 30);
+    margin-bottom: 1rem;
+}
+
+.education .school {
+    margin-bottom: 1.5rem;
+}
+
+.education .school h3 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.education p {
+    font-size: 1.25rem;
+    color: #333;
+    margin-top: 0.5rem;
+}
+
+.education-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+.education-list li {
+    font-size: 1.125rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.education-list li:before {
+    content: '• ';
+    color: #e6683c; /* Bullet color */
+    margin-right: 8px;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .education h2 {
+        font-size: 2rem;
+    }
+
+    .education .school h3 {
+        font-size: 1.5rem;
+    }
+
+    .education p {
+        font-size: 1rem;
+    }
+
+    .education-list li {
+        font-size: 1rem;
+    }
+    .main {
+        background-attachment: scroll;
+}
+}
+
+/* Adding styling for the skills list */
+.skills-list {
+    list-style-type: disc; /* Use bullets as the list style */
+    margin-left: 2rem; /* Indentation for the bullet list */
+    padding: 0;
+    font-size: 1.125rem; /* Adjust font size for the list items */
+    color: #333; /* Set text color */
+}
+
+.skills-list li {
+    margin-bottom: 0.5rem; /* Adds space between each bullet point */
+}
+
+.skills-heading {
+    font-size: 1.5rem; /* Style the "Key Skills" heading */
+    color: #333;
+    margin-bottom: 1rem; /* Space between heading and the list */
+}
+
+/* Optional: Add hover effect for the skills list items */
+.skills-list li:hover {
+    color: #e6683c; /* Change color on hover */
+    cursor: pointer;
+}
