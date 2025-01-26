@@ -82,7 +82,7 @@ ul li a:hover {
     margin-top: 1rem; /* Adds space between the name and the degree */
 }
 
-/* Circular Profile Image */
+/* Circular Profile Image with border */
 .profile-image {
     width: 200px; /* Increased width */
     height: 200px; /* Increased height */
@@ -90,6 +90,7 @@ ul li a:hover {
     overflow: hidden;
     margin-left: 1.5rem; /* Space between the image and the text */
     margin-top: -3rem; /* Further reduced the margin-top to lift the image */
+    border: 5px solid black; /* Added black border around profile image */
 }
 
 .profile-image img {
